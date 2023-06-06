@@ -6,7 +6,10 @@ export default function Home() {
     <div>
       Home page
       <br />
-      <button onClick={() => navigate("order-summary")}>Place Order</button>
+      {/* History is replaced with 'replace: true' */}
+      <button onClick={() => navigate("order-summary", { replace: true })}>
+        Place Order
+      </button>
     </div>
   );
 }
