@@ -1,5 +1,6 @@
-import React from "react";
+import { useParams } from "react-router-dom";
 
 export default function UserDetails() {
-  return <div>UserDetails Page</div>;
+  const { userId } = useParams();
+  return <div>UserDetails Page of user {userId}</div>;
 }
