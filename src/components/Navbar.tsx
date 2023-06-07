@@ -18,11 +18,14 @@ export default function Navbar() {
         <NavLink to={`/`} style={navLinkStyles}>
           Home
         </NavLink>
-        <NavLink to={`/about`} style={navLinkStyles}>
+        <NavLink to={`about`} style={navLinkStyles}>
           About
         </NavLink>
-        <NavLink to={`/products`} style={navLinkStyles}>
+        <NavLink to={`products`} style={navLinkStyles}>
           Product
+        </NavLink>
+        <NavLink to={`notifications`} style={navLinkStyles}>
+          Notifications
         </NavLink>
       </nav>
     </div>
