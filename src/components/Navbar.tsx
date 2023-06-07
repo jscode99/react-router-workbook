@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "./auth";
 
 type navLinkStyles = {
   isActive: boolean;
 };
 
 export default function Navbar() {
+  const { user } = useAuthContext();
   const navLinkStyles = ({ isActive }: navLinkStyles) => {
     return {
       fontWeight: isActive ? "bold" : "normal",
@@ -27,6 +29,14 @@ export default function Navbar() {
         <NavLink to={`/notifications`} style={navLinkStyles}>
           Notifications
         </NavLink>
+        <NavLink to={`/profile`} style={navLinkStyles}>
+          Profile
+        </NavLink>
+        {!user && (
+          <NavLink to={`/login`} style={navLinkStyles}>
+            Login
+          </NavLink>
+        )}
       </nav>
     </div>
   );
