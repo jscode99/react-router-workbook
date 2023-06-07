@@ -7,6 +7,9 @@ export default function Product() {
         <input type="search" placeholder="Search" />
       </div>
       <nav style={{ display: "flex", gap: "10px" }}>
+        {/*
+         Relative links - without '/' - Will inherit the closests route they are rendered - In this scenerio that is '/product'
+          */}
         <Link to="featured">Featured</Link>
         <Link to="new">New</Link>
       </nav>
